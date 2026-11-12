@@ -18,11 +18,14 @@ import me.rexsystems.rexMinions.util.Sounds;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Map;
 
 public final class RexMinions extends JavaPlugin {
+
+    private static final int BSTATS_PLUGIN_ID = 35275;
 
     private ConfigManager configManager;
     private TypeRegistry types;
@@ -71,6 +74,7 @@ public final class RexMinions extends JavaPlugin {
             getLogger().info("PlaceholderAPI expansion registered.");
         }
 
+        new Metrics(this, BSTATS_PLUGIN_ID);
         getLogger().info("RexMinions enabled.");
     }
 
