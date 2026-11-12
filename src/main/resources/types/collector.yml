@@ -1,0 +1,25 @@
+# Collector picks up item entities into a linked container, then its own storage.
+# range is in blocks. Hard cap is 32.
+
+enabled: true
+name: Collector
+item-name: "<aqua>Collector Minion"
+material: HOPPER
+helmet: HOPPER
+chestplate: LEATHER_CHESTPLATE
+leggings: ""
+boots: ""
+lore:
+  - "<gray>Level {level}"
+  - "<gray>Range {range}, every {speed} ticks"
+  - "<gray>Picks up nearby items."
+levels:
+  1:
+    speed-ticks: 40
+    range: 4
+  2:
+    speed-ticks: 30
+    range: 6
+  3:
+    speed-ticks: 20
+    range: 8

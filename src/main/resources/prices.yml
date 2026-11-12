@@ -1,0 +1,48 @@
+# Price per item, in currency units. The seller does not call Vault or any other plugin.
+# A missing material is not sold. 1 currency unit becomes 1 currency item when the owner collects.
+
+prices:
+  COBBLESTONE: 0.1
+  STONE: 0.1
+  DEEPSLATE: 0.15
+  COBBLED_DEEPSLATE: 0.15
+  COAL: 1.0
+  RAW_IRON: 2.0
+  RAW_GOLD: 3.0
+  RAW_COPPER: 0.6
+  IRON_INGOT: 5.0
+  GOLD_INGOT: 8.0
+  DIAMOND: 40.0
+  EMERALD: 20.0
+  REDSTONE: 0.5
+  LAPIS_LAZULI: 0.8
+  ROTTEN_FLESH: 0.3
+  BONE: 0.4
+  STRING: 0.5
+  GUNPOWDER: 1.2
+  SPIDER_EYE: 0.8
+  ENDER_PEARL: 4.0
+  WHEAT: 0.6
+  WHEAT_SEEDS: 0.1
+  CARROT: 0.6
+  POTATO: 0.6
+  BEETROOT: 0.5
+  NETHER_WART: 1.5
+  COCOA_BEANS: 0.7
+  SWEET_BERRIES: 0.4
+  MELON_SLICE: 0.3
+  PUMPKIN: 0.8
+  COD: 1.2
+  SALMON: 1.6
+  TROPICAL_FISH: 2.0
+  PUFFERFISH: 2.5
+  OAK_LOG: 0.4
+  SPRUCE_LOG: 0.4
+  BIRCH_LOG: 0.4
+  JUNGLE_LOG: 0.4
+  ACACIA_LOG: 0.4
+  DARK_OAK_LOG: 0.4
+  MANGROVE_LOG: 0.5
+  CHERRY_LOG: 0.6
+  CRIMSON_STEM: 0.8
+  WARPED_STEM: 0.8

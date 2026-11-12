@@ -1,0 +1,110 @@
+# RexMinions configuration
+# Messages accept MiniMessage, legacy & codes, &#RRGGBB, and #RRGGBB.
+# Player names are inserted as literal text. Color belongs in the template.
+
+config-version: 1
+
+settings:
+  enabled: true
+  # Used when the player has no rexminions.limit.<n> node, and when the highest node is 0.
+  default-limit: 5
+  # How many kills, breaks, pickups, catches, harvests, sales, or log breaks one minion may do on its own tick.
+  actions-per-tick: 4
+  # Block positions one minion may inspect on its tick. The scan continues on the next tick.
+  blocks-per-tick: 512
+  # Chests, trapped chests, and barrels farther than this are ignored. Values above 32 are clamped.
+  link-distance: 8
+  # Slots in a minion's own storage. Clamped to 1-54.
+  storage-size: 27
+  # Farmer resets a mature crop instead of breaking it.
+  replant: true
+  # Damage the tool in the GUI once per tick that did work. Unbreaking can skip a hit.
+  use-durability: true
+  # When false, Fortune on the tool is ignored.
+  fortune: true
+  # When false, Looting on the tool is ignored.
+  looting: true
+  # Ticks removed from the level period for each Efficiency level.
+  efficiency-ticks: 4
+  # Period never goes below this.
+  minimum-ticks: 10
+  # armor_stand or marker. A marker has no helmet slot.
+  entity: armor_stand
+  small-armor-stand: false
+  show-name: true
+  # Seller balance is paid out as this item. 1 balance = 1 item.
+  currency: EMERALD
+
+gui:
+  title: "<gold>{type} <gray>level {level}"
+  rows: 3
+  filler: GRAY_STAINED_GLASS_PANE
+  slots:
+    info: 4
+    tool: 11
+    link: 13
+    storage: 15
+    balance: 22
+    pickup: 26
+  storage-title: "<gold>{type} storage"
+  info-name: "<gold>{type}"
+  tool-name: "<yellow>Tool"
+  tool-lore:
+    - "<gray>Place a tool here."
+    - "<gray>Efficiency shortens the wait."
+  link-name: "<aqua>Link container"
+  link-lore:
+    - "<gray>Nearest chest, trapped chest, or barrel"
+    - "<gray>within {distance} blocks."
+  storage-name: "<green>Storage"
+  storage-lore:
+    - "<gray>Items kept on this minion."
+  balance-name: "<gold>Balance: {balance}"
+  balance-lore:
+    - "<gray>Click to take {currency}."
+  pickup-name: "<red>Pick up"
+  pickup-lore:
+    - "<gray>Remove the minion and return the item."
+
+sounds:
+  # Bukkit sound names. Blank plays nothing.
+  # {player} and {type} are replaced before the name is resolved.
+  place: BLOCK_NOTE_BLOCK_PLING
+  pickup: ENTITY_ITEM_PICKUP
+  error: ENTITY_VILLAGER_NO
+  link: BLOCK_CHEST_CLOSE
+  volume: 1.0
+  pitch: 1.0
+
+messages:
+  prefix: "<gray>[<gold>RexMinions</gold>]</gray> "
+  no-permission: "<prefix><red>You cannot do that."
+  players-only: "<prefix><red>Only players can do that."
+  unknown-command: "<prefix><red>Unknown command. Try <white>/rexminions help</white>."
+  unknown-type: "<prefix><red>Unknown minion type <white>{type}</white>."
+  unknown-player: "<prefix><red>That player is not online."
+  invalid-number: "<prefix><red>Level and amount have to be whole numbers."
+  gave: "<prefix><gray>Gave <white>{amount}</white> <white>{type}</white> level <white>{level}</white> to <white>{player}</white>."
+  reloaded: "<prefix><gray>Reloaded configuration. Placed minions were left where they are."
+  disabled: "<prefix><red>Minions are disabled."
+  placed: "<prefix><gray>Placed a <white>{type}</white> level <white>{level}</white>."
+  picked-up: "<prefix><gray>Picked up the <white>{type}</white>."
+  dropped: "<prefix><gray>Your inventory was full, so the minion item was dropped."
+  limit: "<prefix><red>You already have <white>{count}</white> of <white>{limit}</white> minions."
+  cannot-place: "<prefix><red>There is no free block there."
+  not-owner: "<prefix><red>That minion belongs to someone else."
+  worldguard: "<prefix><red>You cannot use a minion in that region."
+  linked: "<prefix><gray>Linked a container at <white>{x} {y} {z}</white>."
+  link-missing: "<prefix><gray>No chest, trapped chest, or barrel within <white>{distance}</white> blocks."
+  storage-title-missing: "<prefix><red>That minion is not loaded."
+  balance-empty: "<prefix><gray>There is nothing to collect."
+  balance-paid: "<prefix><gray>Collected <white>{amount}</white>."
+  list-header: "<prefix><gray>Minions: <white>{count}</white> / <white>{limit}</white>"
+  list-line: "<gray>{type} level {level} in {world} at {x} {y} {z}"
+  list-line-admin: "<gray>{owner} {type} level {level} in {world} at {x} {y} {z}"
+  list-empty: "<prefix><gray>You have no minions."
+  help:
+    - "<prefix><gray>/rexminions help"
+    - "<prefix><gray>/rexminions give <player> <type> [level] [amount]"
+    - "<prefix><gray>/rexminions list"
+    - "<prefix><gray>/rexminions reload"

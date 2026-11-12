@@ -1,0 +1,25 @@
+# Farmer harvests mature crops. settings.replant in config.yml resets the plant.
+# range is in blocks. Hard cap is 32.
+
+enabled: true
+name: Farmer
+item-name: "<green>Farmer Minion"
+material: GOLDEN_HOE
+helmet: LEATHER_HELMET
+chestplate: LEATHER_CHESTPLATE
+leggings: ""
+boots: ""
+lore:
+  - "<gray>Level {level}"
+  - "<gray>Range {range}, every {speed} ticks"
+  - "<gray>Harvests mature crops."
+levels:
+  1:
+    speed-ticks: 80
+    range: 3
+  2:
+    speed-ticks: 60
+    range: 4
+  3:
+    speed-ticks: 40
+    range: 6

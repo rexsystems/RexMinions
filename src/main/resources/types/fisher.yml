@@ -1,0 +1,25 @@
+# Fisher catches a fish when water is inside range.
+# range is in blocks. Hard cap is 32.
+
+enabled: true
+name: Fisher
+item-name: "<blue>Fisher Minion"
+material: FISHING_ROD
+helmet: COD
+chestplate: LEATHER_CHESTPLATE
+leggings: ""
+boots: ""
+lore:
+  - "<gray>Level {level}"
+  - "<gray>Range {range}, every {speed} ticks"
+  - "<gray>Catches fish from nearby water."
+levels:
+  1:
+    speed-ticks: 100
+    range: 3
+  2:
+    speed-ticks: 80
+    range: 4
+  3:
+    speed-ticks: 60
+    range: 6

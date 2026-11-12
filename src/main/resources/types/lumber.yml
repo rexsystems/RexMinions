@@ -1,0 +1,28 @@
+# Lumber breaks logs that connect to leaves. A lone log pile is left alone.
+# leave-bottom keeps the lowest log. replant places a sapling when that bottom log is broken.
+# range is in blocks. Hard cap is 32.
+
+enabled: true
+name: Lumber
+item-name: "<dark_green>Lumber Minion"
+material: IRON_AXE
+helmet: OAK_LOG
+chestplate: LEATHER_CHESTPLATE
+leggings: ""
+boots: ""
+leave-bottom: true
+replant: true
+lore:
+  - "<gray>Level {level}"
+  - "<gray>Range {range}, every {speed} ticks"
+  - "<gray>Chops logs that are part of a tree."
+levels:
+  1:
+    speed-ticks: 50
+    range: 4
+  2:
+    speed-ticks: 35
+    range: 6
+  3:
+    speed-ticks: 20
+    range: 8

@@ -1,0 +1,34 @@
+# Miner breaks blocks whose material is listed under generators.
+# range is in blocks. Hard cap is 32.
+
+enabled: true
+name: Miner
+item-name: "<gray>Miner Minion"
+material: IRON_PICKAXE
+helmet: IRON_HELMET
+chestplate: LEATHER_CHESTPLATE
+leggings: ""
+boots: ""
+lore:
+  - "<gray>Level {level}"
+  - "<gray>Range {range}, every {speed} ticks"
+  - "<gray>Breaks generator blocks in range."
+generators:
+  - COBBLESTONE
+  - STONE
+  - DEEPSLATE
+  - COBBLED_DEEPSLATE
+  - BASALT
+  - NETHERRACK
+  - END_STONE
+  - OBSIDIAN
+levels:
+  1:
+    speed-ticks: 60
+    range: 3
+  2:
+    speed-ticks: 45
+    range: 4
+  3:
+    speed-ticks: 30
+    range: 6
