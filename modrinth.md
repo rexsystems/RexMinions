@@ -35,4 +35,4 @@ Aliases: `/rminion`, `/minions`
 | `rexminions.admin` | op | Open and pick up any minion, and list every minion |
 | `rexminions.limit.<n>` | | Place up to n minions. `rexminions.limit.0` uses `settings.default-limit` |
 
-Documentation: https://rexsystems.me/docs/rexminions
+Documentation: https://docs.rexsystems.me/rexminions/

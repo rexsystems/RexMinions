@@ -48,7 +48,7 @@ Aliases: `/rminion`, `/minions`
 
 The pages in [docs/](docs/index.md) drop into a Starlight site at `src/content/docs/rexminions/`. Paste `docs/sidebar.mjs` into the site sidebar.
 
-Full docs: [https://rexsystems.me/docs/rexminions](https://rexsystems.me/docs/rexminions)
+Full docs: [https://docs.rexsystems.me/rexminions/](https://docs.rexsystems.me/rexminions/)
 
 ## License
 
